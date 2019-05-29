@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>631</width>
+    <height>515</height>
+   </rect>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>卡拉OK歌曲查詢</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>631</width>
+     <height>491</height>
+    </size>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QGroupBox" name="gb_001">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>查詢</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="hb_001">
+           <item>
+            <widget class="QLabel" name="lbl_sing002">
+             <property name="font">
+              <font>
+               <family>微軟正黑體</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>歌手名稱</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::AutoText</enum>
+             </property>
+             <property name="buddy">
+              <cstring>sing002</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="sing002"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pb_sing002">
+             <property name="font">
+              <font>
+               <family>微軟正黑體</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>搜尋</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="hb_002">
+           <property name="sizeConstraint">
+            <enum>QLayout::SetDefaultConstraint</enum>
+           </property>
+           <item>
+            <widget class="QLabel" name="lbl_song002">
+             <property name="font">
+              <font>
+               <family>微軟正黑體</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>歌曲名稱</string>
+             </property>
+             <property name="buddy">
+              <cstring>song002</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="song002"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pb_song002">
+             <property name="font">
+              <font>
+               <family>微軟正黑體</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>搜尋</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer name="sp_001">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>30</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pb_exit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>微軟正黑體</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>離開</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QTableWidget" name="tb_1">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>微軟正黑體 Light</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAsNeeded</enum>
+       </property>
+       <property name="autoScroll">
+        <bool>true</bool>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::DoubleClicked</set>
+       </property>
+       <property name="dragEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::SingleSelection</enum>
+       </property>
+       <property name="horizontalScrollMode">
+        <enum>QAbstractItemView::ScrollPerItem</enum>
+       </property>
+       <property name="sortingEnabled">
+        <bool>true</bool>
+       </property>
+       <property name="rowCount">
+        <number>10</number>
+       </property>
+       <property name="columnCount">
+        <number>3</number>
+       </property>
+       <attribute name="horizontalHeaderVisible">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="horizontalHeaderCascadingSectionResizes">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>100</number>
+       </attribute>
+       <attribute name="horizontalHeaderMinimumSectionSize">
+        <number>50</number>
+       </attribute>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <column>
+        <property name="text">
+         <string>歌手</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>歌曲名稱</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>曲號</string>
+        </property>
+       </column>
+       <item row="0" column="0">
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsEditable|ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+        </property>
+       </item>
+       <item row="0" column="1">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsEnabled</set>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="remark">
+       <property name="font">
+        <font>
+         <family>微軟正黑體</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>631</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pb_exit</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>tb_1</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>578</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>317</x>
+     <y>313</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_exit</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>578</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>315</x>
+     <y>250</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_sing002</sender>
+   <signal>clicked()</signal>
+   <receiver>tb_1</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>475</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>317</x>
+     <y>313</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_song002</sender>
+   <signal>clicked()</signal>
+   <receiver>tb_1</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>475</x>
+     <y>110</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>317</x>
+     <y>313</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_song002</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>tb_1</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>475</x>
+     <y>110</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>317</x>
+     <y>313</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_sing002</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>tb_1</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>475</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>317</x>
+     <y>313</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

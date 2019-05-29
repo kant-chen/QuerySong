@@ -1,0 +1,45 @@
+[sing]
+
+sing001  歌手編號
+sing002  歌手名稱
+
+
+[song]
+song001  歌曲編號
+song002  歌曲名稱
+song003  歌手編號
+-----------------------------------------
+【SQLite】
+#Database file:"D:\Coding\Python\py_folder\qt_program\qry_song\crazyktv.db3"】
+
+CREATE TABLE ktv_Singer(
+Singer_Id       BIGINT PRIMARY KEY,
+Singer_Name     VARCHAR(60),
+Singer_Type     VARCHAR(20),
+Singer_Spell    VARCHAR(60),
+Singer_Strokes  INTEGER,
+Singer_SpellNum VARCHAR(60),
+Singer_PenStyle VARCHAR(60)
+);
+
+CREATE TABLE ktv_Song(
+Song_Id         BIGINT PRIMARY KEY,
+Song_Path       VARCHAR(255),
+Song_SongName   VARCHAR(80),
+Song_Singer     VARCHAR(60),
+Song_Spell      VARCHAR(80),
+Song_WordCount  INTEGER,
+Song_Volume     INTEGER,
+Song_Track      INTEGER,
+Song_Lang       VARCHAR(20),
+Song_FileName   VARCHAR(255),
+Song_PlayCount  BIGING,
+Song_PlayState  INTEGER,
+Song_CreatDate  DATE,
+Song_SingerType INTEGER,
+Song_SpellNum   VARCHAR(80),
+Song_SongType   VARCHAR(30),
+Song_SongStroke INTEGER,
+Song_MB         FLOAT,
+Song_PenStyle   VARCHAR(80)
+)
